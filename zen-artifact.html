@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen Artifact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .yin-yang {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(to right, #000 50%, #fff 50%);
+            border: 4px solid #fff;
+            position: relative;
+        }
+        .yin-yang::before, .yin-yang::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        .yin-yang::before {
+            background: #000;
+            transform: translate(-50%, 0);
+        }
+        .yin-yang::after {
+            background: #fff;
+            transform: translate(-50%, 150px);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 min-h-screen flex flex-col items-center justify-center p-8">
+    <div class="yin-yang mb-12"></div>
+    <h1 class="text-6xl font-light text-white text-center italic tracking-widest mb-8">"The obstacle is the path."</h1>
+    <a href="artifacts.html" class="bg-white/10 hover:bg-white/20 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+        &larr; Back to Artifacts
+    </a>
+</body>
+</html>
